@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>REED-USA | Staging</title>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/reset.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="css/zerogrid.css" type="text/css" media="all">
+	 <link rel="stylesheet" href="css/responsive.css" type="text/css" media="all">
+	 <link rel="stylesheet" href="css/responsiveslides.css" />   
+  <link rel="stylesheet" type="text/css" media="screen" href="http://cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.css" />
+<style type="text/css">
+    a.fancybox img {
+        border: none;
+        box-shadow: 0 1px 7px rgba(0,0,0,0.6);
+        -o-transform: scale(1,1); -ms-transform: scale(1,1); -moz-transform: scale(1,1); -webkit-transform: scale(1,1); transform: scale(1,1); -o-transition: all 0.2s ease-in-out; -ms-transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out;
+    } 
+    a.fancybox:hover img {
+        position: relative; z-index: 999; -o-transform: scale(1.03,1.03); -ms-transform: scale(1.03,1.03); -moz-transform: scale(1.03,1.03); -webkit-transform: scale(1.03,1.03); transform: scale(1.03,1.03);
+    }
+</style>
+  
+  <style type="text/css">
+/* NAVIGATION */
+nav {
+  width: 100%;
+  margin: 0 auto;
+  background: #000;
+  padding-top: 15px;
+  padding-bottom:10px;
+  box-shadow: 0px 5px 0px #dedede;
+}
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #aaa;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0 10px;
+}
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+}
+nav ul li a:hover {
+  color: #555;
+}
+
+
+/* stroke */
+nav.stroke ul li a,
+nav.fill ul li a {
+  position: relative;
+}
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #aaa;
+  height: 1px;
+}
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
+
+nav.fill ul li a {
+  transition: all 2s;
+}
+
+nav.fill ul li a:after {
+  text-align: left;
+  content: '.';
+  margin: 0;
+  opacity: 0;
+}
+nav.fill ul li a:hover {
+  color: #fff;
+  z-index: 1;
+}
+nav.fill ul li a:hover:after {
+  z-index: -10;
+  animation: fill 1s forwards;
+  -webkit-animation: fill 1s forwards;
+  -moz-animation: fill 1s forwards;
+  opacity: 1;
+}
+
+/* Circle */
+nav.circle ul li a {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+nav.circle ul li a:after {
+  display: block;
+  position: absolute;
+  margin: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: '.';
+  color: transparent;
+  width: 1px;
+  height: 1px;
+  border-radius: 50%;
+  background: transparent;
+}
+nav.circle ul li a:hover:after {
+  -webkit-animation: circle 1.5s ease-in forwards;
+}
+
+/* SHIFT */
+nav.shift ul li a {
+  position:relative;
+  z-index: 1;
+}
+nav.shift ul li a:hover {
+  color: #91640F;
+}
+nav.shift ul li a:after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: 1px;
+  content: '.';
+  color: transparent;
+  background: #F1C40F;
+  visibility: none;
+  opacity: 0;
+  z-index: -1;
+}
+nav.shift ul li a:hover:after {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+}
+
+
+
+/* Keyframes */
+@-webkit-keyframes fill {
+  0% {
+    width: 0%;
+    height: 1px;
+  }
+  50% {
+    width: 100%;
+    height: 1px;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+    background: #333;
+  }
+}
+
+/* Keyframes */
+@-webkit-keyframes circle {
+  0% {
+    width: 1px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    height: 1px;
+    z-index: -1;
+    background: #eee;
+    border-radius: 100%;
+  }
+  100% {
+    background: #aaa;
+    height: 5000%;
+    width: 5000%;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 0;
+  }
+}
+
+#ic_signupform .elcontainer {
+   background: transparent;
+   text-align: center;
+max-width:300px;
+   padding: 10px 10px;
+   border-radius: 0px;
+   border: 1px none #ffffff;
+   font-size: 12px;
+   color: #000000;
+   font-family: arial;
+}
+
+#ic_signupform .elcontainer.center-aligned .formEl { 
+
+}
+
+#ic_signupform .elcontainer.right-aligned .formEl { 
+
+}
+
+#ic_signupform .form-header {
+   
+   background: transparent;
+   margin-top: -10px;
+   margin-left: -10px;
+   margin-right: -10px;
+   margin-bottom: 10px; /* using padding on purpose */
+   padding-top: 20px;
+   padding-right: 10px;
+   padding-bottom: 20px;
+   padding-left: 10px;
+   border-radius: calc(0px - 1px) calc(0px - 1px) 0 0;
+   text-align: center;
+   font-size: 150%;
+   color: #333333;
+   border-bottom: 1px solid #dddddd;
+}
+
+#ic_signupform .elcontainer.inline-label-left .formEl.fieldtype-input label,
+#ic_signupform .elcontainer.inline-label-left .formEl.fieldtype-dropdown label,
+#ic_signupform .elcontainer.inline-label-left .formEl.fieldtype-radio h3,
+#ic_signupform .elcontainer.inline-label-left .formEl.fieldtype-checkbox h3,
+#ic_signupform .elcontainer.inline-label-right .formEl.fieldtype-input label,
+#ic_signupform .elcontainer.inline-label-right .formEl.fieldtype-dropdown label,
+#ic_signupform .elcontainer.inline-label-right .formEl.fieldtype-radio h3,
+#ic_signupform .elcontainer.inline-label-right .formEl.fieldtype-checkbox h3 {
+   width: 30%;
+}
+	   
+#ic_signupform .elcontainer.inline-label-left .formEl.fieldtype-radio h3,
+#ic_signupform .elcontainer.inline-label-left .formEl.fieldtype-checkbox h3,
+#ic_signupform .elcontainer.inline-label-right .formEl.fieldtype-radio h3,
+#ic_signupform .elcontainer.inline-label-right .formEl.fieldtype-checkbox h3 {
+   line-height: 3em; 
+}
+
+#ic_signupform .elcontainer.tight.inline-label-left .formEl.fieldtype-radio h3,
+#ic_signupform .elcontainer.tight.inline-label-left .formEl.fieldtype-checkbox h3,
+#ic_signupform .elcontainer.tight.inline-label-right .formEl.fieldtype-radio h3,
+#ic_signupform .elcontainer.tight.inline-label-right .formEl.fieldtype-checkbox h3 {
+   line-height: 2em; 
+}
+
+#ic_signupform .elcontainer.generous.inline-label-left .formEl.fieldtype-radio h3,
+#ic_signupform .elcontainer.generous.inline-label-left .formEl.fieldtype-checkbox h3,
+#ic_signupform .elcontainer.generous.inline-label-right .formEl.fieldtype-radio h3,
+#ic_signupform .elcontainer.generous.inline-label-right .formEl.fieldtype-checkbox h3 {
+   line-height: 4em; 
+}
+
+#ic_signupform .elcontainer.inline-label-left .formEl input[type="text"],
+#ic_signupform .elcontainer.inline-label-left .formEl select,
+#ic_signupform .elcontainer.inline-label-left .formEl.fieldtype-radio .option-container,
+#ic_signupform .elcontainer.inline-label-left .formEl.fieldtype-checkbox .option-container,
+#ic_signupform .elcontainer.inline-label-right .formEl input[type="text"],
+#ic_signupform .elcontainer.inline-label-right .formEl select,
+#ic_signupform .elcontainer.inline-label-right .formEl.fieldtype-radio .option-container,
+#ic_signupform .elcontainer.inline-label-right .formEl.fieldtype-checkbox .option-container {
+   width: 70%;
+}
+
+#ic_signupform .elcontainer.hidden-label .formEl.required:before {
+   color: #000000;
+}
+	   
+#ic_signupform .elcontainer .formEl {
+   font-size: 1em;
+}
+
+#ic_signupform .elcontainer .formEl.fieldtype-input label,
+#ic_signupform .elcontainer .formEl.fieldtype-dropdown label,
+#ic_signupform .elcontainer .formEl.fieldtype-radio h3,
+#ic_signupform .elcontainer .formEl.fieldtype-checkbox h3 {
+   font-size: 100%;
+   font-weight: bold;
+   color: #000000;
+}
+
+#ic_signupform .elcontainer .formEl.fieldtype-input input[type="text"],
+#ic_signupform .elcontainer .formEl.fieldtype-dropdown select {
+   background-color: transparent;
+   border: 1px solid #666666;
+   border-radius: 0px;
+}
+	   
+#ic_signupform .elcontainer .formEl.fieldtype-input input[type="text"],
+#ic_signupform .elcontainer .formEl.fieldtype-dropdown select,
+#ic_signupform .elcontainer .formEl.fieldtype-radio label,
+#ic_signupform .elcontainer .formEl.fieldtype-checkbox label {
+   font-size: 100%;
+}
+
+#ic_signupform .elcontainer .formEl input[type="text"]::-moz-placeholder {
+   color: #bdbdbf;
+   font-family: inherit;
+}
+
+#ic_signupform .elcontainer .formEl input[type="text"]::-webkit-input-placeholder {
+   color: #bdbdbf;
+   font-family: inherit;
+}
+
+#ic_signupform .elcontainer .formEl input[type="text"]:-ms-input-placeholder {
+   color: #bdbdbf;
+   font-family: inherit;
+}
+
+#ic_signupform .elcontainer .formEl input[type="text"],
+#ic_signupform .elcontainer .formEl select,
+#ic_signupform .elcontainer .formEl .option-container label {
+   color: #000000;
+   font-family: inherit;
+}
+	   
+#ic_signupform .elcontainer.inline-button .submit-container {
+	display: inline-block;
+	box-sizing: border-box;
+	right: -.5em;
+	padding: 0 1em 0 0;
+	position: relative;
+	vertical-align: bottom;
+	margin-bottom: 1em;
+}
+	
+#ic_signupform .elcontainer.inline-button.tight .sortables {
+	margin-bottom: -.5em;
+}
+	
+#ic_signupform .elcontainer.inline-button .sortables {
+	margin-bottom: -1em;
+}
+	
+#ic_signupform .elcontainer.inline-button.generous .sortables {
+	margin-bottom: -1.5em;
+}
+
+#ic_signupform .elcontainer .submit-container {
+   text-align: center;
+}
+
+#ic_signupform .elcontainer .submit-container input[type="submit"] {
+   background: #c00000;
+   border: 1px solid #730d0d;
+   border-radius: 0px;
+   line-height: 1em;
+   padding: 15px 45px;
+   color: #ffffff;
+   font-size: 90%;
+   font-family: inherit;
+   width: auto;
+</style>
+  <script src="js/jquery-1.6.3.min.js" type="text/javascript"></script>
+    <script src="js/cufon-yui.js" type="text/javascript"></script>
+    <script src="js/cufon-replace.js" type="text/javascript"></script>
+	<script src="js/Kozuka_Gothic_Pro_OpenType_300.font.js" type="text/javascript"></script>
+    <script src="js/Kozuka_Gothic_Pro_OpenType_500.font.js" type="text/javascript"></script> 
+    <script src="js/FF-cash.js" type="text/javascript"></script>      
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="js/tms-0.3.js"></script>
+	<script type="text/javascript" src="js/tms_presets.js"></script>
+    <script src="js/jcarousellite_1.0.1.js" type="text/javascript"></script>
+	<script type="text/javascript" src="js/css3-mediaqueries.js"></script>
+	<script src="js/responsiveslides.js"></script>
+	<!--[if lt IE 8]>
+    <div style=' clear: both; text-align:center; position: relative;'>
+        <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+        	<img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+        </a>
+    </div>
+	<![endif]-->
+    <!--[if lt IE 9]>
+   		<script type="text/javascript" src="js/html5.js"></script>
+        <link rel="stylesheet" href="css/ie.css" type="text/css" media="screen">
+	<![endif]-->
+</head>
+<body id="page3">
+	<!--==============================header=================================-->
+    <header>
+    	<div class="menu-row">
+        	<div class="main zerogrid">
+            	<link href='http://fonts.googleapis.com/css?family=Roboto:500,900,100,300,700,400' rel='stylesheet' type='text/css'>
+
+
+  <nav class="stroke">
+    <ul>
+      <li><a href="">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="staging.html#">Staging</a></li>
+      <li><a href="scenery.html">Scenery</a></li>
+      <li><a href="contacts.html">Contact</a></li>
+    </ul>
+  </nav>
+</section>
+            </div>
+        </div>
+    	<div class="row-bot">
+            <div class="row-bot-bg">
+                <div class="main zerogrid">
+                    <div class="wrapper">
+                        <h1><a href="index.html"><img src="images/logo-2.png" /></a></h1>
+                        <h2>World Leader in Event Staging & Artistic Scenery</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!--==============================content================================-->
+    <section id="content">
+        <div class="main">
+            <div class="zerogrid">
+                <div class="wrapper">
+                	<article class="col-1-4"><div class="wrap-col">
+                    	<h3 class="p1">Staging</h3>
+                        <ul class="list-1">
+                        	<li><a href="Scaffold-Stages.html">Scaffold Stages</a></li>
+                            <li><a href="Poster-Stages.html">Poster Stages</a></li>
+                            <li><a href="#">Truss</a></li>
+                            <li><a href="#"></a></li> 
+                            <li><a href="#"></a></li> 
+							<li><a href="#"></a></li> 
+							<li><a href="#"></a></li> 
+						 
+                        </ul>
+                    </div></article>
+                    <article class="col-3-4">
+                    	<h3></h3>
+                        <div class="wrapper indent-bot">
+                            <div class="col-1-3"><div class="wrap-col">
+                                <div class="p2">
+                                    <figure class="img-border"><a href="#"><img class="fancybox" src="images/thumb-9.png" data-big="images/9-full.jpg" alt=""></a></figure>
+                                    <div class="clear"></div>
+                                </div>
+                                <h6 class="p1"><center>Mt. Hood <br>Community College</center></h6>
+                                
+                            </div></div>
+                            <div class="col-1-3"><div class="wrap-col">
+                                <div class="p2">
+                                    <figure class="img-border"><a href="#"><img class="fancybox" src="images/thumb-10.png" data-big="images/10-full.jpg" alt=""></a></figure>
+                                    <div class="clear"></div>
+                                </div>
+                                <h6 class="p1"><center>Bi Mart Country Music Festival Brownsville, OR</center></h6>
+                                
+                            </div></div>
+                            <div class="col-1-3"><div class="wrap-col">
+                                <div class="p2">
+                                    <figure class="img-border"><a href="#"><img class="fancybox" src="images/thumb-11.png" data-big="images/11-full.jpg" alt=""></a></figure>
+                                    <div class="clear"></div>
+                                </div>
+                                <h6 class="p1"><center>Bi Mart Country Music Festival Brownsville, OR</center></h6>
+                            </div></div>
+                        </div>
+                        <div class="wrapper indent-bot">
+                            <div class="col-1-3"><div class="wrap-col">
+                                <div class="p2">
+                                    <figure class="img-border"><a href="#"><img class="fancybox" src="images/thumb-4.jpg" data-big="images/4-full.jpg" alt=""></a></figure>
+                                    <div class="clear"></div>
+                                </div>
+                                <h6 class="p1"><center>Portland Rose Festival</center></h6>
+                                
+                            </div></div>
+                            <div class="col-1-3"><div class="wrap-col">
+                                <div class="p2">
+                                    <figure class="img-border"><a href="#"><img class="fancybox" src="images/thumb-5.png" data-big="images/5-full.jpg" alt=""></a></figure>
+                                    <div class="clear"></div>
+                                </div>
+                                <h6 class="p1"><center>Luis Palau Portland, OR</center></h6>
+                               
+                            </div></div>
+                            <div class="col-1-3"><div class="wrap-col">
+                                <div class="p2">
+                                    <figure class="img-border"><a href="#"><img class="fancybox" src="images/thumb-6.png" data-big="images/6-full.jpg" alt=""></a></figure>
+                                    <div class="clear"></div>
+                                </div>
+                                <h6 class="p1"><center>Verizon Wireless <br>Portland, OR</center></h6>
+                              
+                            </div></div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="col-1-3"><div class="wrap-col">
+                                <div class="p2">
+                                    <figure class="img-border"><a href="#"><img class="fancybox" src="images/thumb-7.png" data-big="images/7-full.jpeg" alt=""></a></figure>
+                                    <div class="clear"></div>
+                                </div>
+                                <h6 class="p1"><center>"Making Boring Brilliant" <br>Fuse Network / Bass</center></h6>
+                                
+                            </div></div>
+                            <div class="col-1-3"><div class="wrap-col">
+                                <div class="p2">
+                                    <figure class="img-border"><a href="#"><img class="fancybox" src="images/thumb-8.png" data-big="images/8-full.jpg" alt=""></a></figure>
+                                    <div class="clear"></div>
+                                </div>
+                                <h6 class="p1"><center>Bi Mart Country Music Festival Brownsville, OR</center></h6>
+                                
+                            </div></div>
+							<div class="col-1-3"><div class="wrap-col">
+                                <div class="p2">
+                                    <figure class="img-border"><a href="#"><img class="fancybox" src="images/thumb-12.png" data-big="images/12-full.jpg" alt=""></a></figure>
+                                    <div class="clear"></div>
+                                </div>
+                                <h6 class="p1"><center>Portland Rose Festival</center></h6>
+                               
+                            </div></div>
+                        </div></article>
+                    <article class="col-1-4"><div class="wrap-col">
+                    	
+                    </div></article>
+					 <article class="col-3-4">
+                    	<h3></h3>
+                        <div class="wrapper indent-bot">
+                            <div class="col-1-3"><div class="wrap-col">
+                                <div class="p2">
+                                    <figure class="img-border"><a href="#"><img class="fancybox" src="images/thumb-53.png" data-big="images/full-53.png" alt=""></a></figure>
+                                    <div class="clear"></div>
+                                </div>
+                                <h6 class="p1"><center></center></h6>
+                                
+                            </div></div>
+                            <div class="col-1-3"><div class="wrap-col">
+                                <div class="p2">
+                                    <figure class="img-border"><a href="#"><img class="fancybox" src="images/thumb-54.png" data-big="images/full-54.png" alt=""></a></figure>
+                                    <div class="clear"></div>
+                                </div>
+                                <h6 class="p1"><center></center></h6>
+                                
+                            </div></div>
+                            <div class="col-1-3"><div class="wrap-col">
+                                <div class="p2">
+                                    <figure class="img-border"><a href="#"><img class="fancybox" src="images/thumb-" data-big="images/" alt=""></a></figure>
+                                    <div class="clear"></div>
+                                </div>
+                                <h6 class="p1"><center></center></h6>
+                            </div></div>
+                        </div>
+                        <div class="wrapper indent-bot">
+                            <div class="col-1-3"><div class="wrap-col">
+                                <div class="p2">
+                                    <figure class="img-border"><a href="#"><img class="fancybox" src="images/thumb-" data-big="images/" alt=""></a></figure>
+                                    <div class="clear"></div>
+                                </div>
+                                <h6 class="p1"><center></center></h6>
+                                
+                            </div></div>
+                            <div class="col-1-3"><div class="wrap-col">
+                                <div class="p2">
+                                    <figure class="img-border"><a href="#"><img class="fancybox" src="images/thumb" data-big="images/" alt=""></a></figure>
+                                    <div class="clear"></div>
+                                </div>
+                                <h6 class="p1"><center></center></h6>
+                               
+                            </div></div>
+                            <div class="col-1-3"><div class="wrap-col">
+                                <div class="p2">
+                                    <figure class="img-border"><a href="#"><img class="fancybox" src="images/thumb-" data-big="images/" alt=""></a></figure>
+                                    <div class="clear"></div>
+                                </div>
+                                <h6 class="p1"><center></center></h6>
+                              
+                            </div></div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="col-1-3"><div class="wrap-col">
+                                <div class="p2">
+                                    <figure class="img-border"><a href="#"><img class="fancybox" src="images/thumb-" data-big="images/" alt=""></a></figure>
+                                    <div class="clear"></div>
+                                </div>
+                                <h6 class="p1"><center></center></h6>
+                                
+                            </div></div>
+                            <div class="col-1-3"><div class="wrap-col">
+                                <div class="p2">
+                                    <figure class="img-border"><a href="#"><img class="fancybox" src="images/thumb-" data-big="images/" alt=""></a></figure>
+                                    <div class="clear"></div>
+                                </div>
+                                <h6 class="p1"><center></center></h6>
+                                
+                            </div></div>
+							<div class="col-1-3"><div class="wrap-col">
+                                <div class="p2">
+                                    <figure class="img-border"><a href="#"><img class="fancybox" src="images/thumb-" data-big="images/" alt=""></a></figure>
+                                    <div class="clear"></div>
+                                </div>
+                                <h6 class="p1"><center></center></h6>
+                               
+                            </div></div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--==============================footer=================================-->
+    <footer>
+        <div class="main zerogrid">
+        	<div class="aligncenter">
+			
+<link href="//app.icontact.com/icp/static/human/css/signupBuilder/formGlobalStyles.css" rel="stylesheet" type="text/css">
+
+<style id="signupBuilderAdvancedStyles" type="text/css">
+
+</style>
+
+<style id="signupBuilderStyles" type="text/css">
+
+}</style>
+
+<form id="ic_signupform" action="https://app.icontact.com/icp/core/mycontacts/signup/designer/form/?id=87&cid=818106&lid=3943" method="POST"><div class="elcontainer normal stacked center-aligned"><div class="form-header"><h3>Subscribe to our Email List</h3></div><div class="sortables"><div class="formEl fieldtype-input required" style="width: 100%; display: inline-block;" data-validation-type="1" data-label="Email"><label>Email<span class="indicator required">*</span></label><input name="data[email]" type="text" placeholder=""></div><div class="formEl fieldtype-checkbox required" style="width: 100%; display: none;" dataname="listGroups" data-validation-type="1" data-label="Lists"><h3>Lists<span class="indicator required">*</span></h3><div class="option-container"><label class="checkbox"><input name="data[listGroups][]" type="checkbox" checked="checked" alt="" value="43750">New List</label></div></div><div class="submit-container"><input class="btn btn-submit" type="submit" value="Submit"></div></div><div class="hidden-container"></div></div></form><img src="//app.icontact.com/icp/core/signup/tracking.gif?id=87&cid=818106&lid=3943"/>
+            	<p class="p0">REED-USA &copy; 2016</p>
+                <a href="http://www.zerotheme.com" target="_blank">Zero Theme</a>
+            </div>
+        </div>
+    </footer>
+	<script type="text/javascript"> Cufon.now(); </script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.pack.min.js"></script>
+<script type="text/javascript">
+    $(function($){
+        var addToAll = false;
+        var gallery = true;
+        var titlePosition = 'inside';
+        $(addToAll ? 'img' : 'img.fancybox').each(function(){
+            var $this = $(this);
+            var title = $this.attr('title');
+            var src = $this.attr('data-big') || $this.attr('src');
+            var a = $('<a href="#" class="fancybox"></a>').attr('href', src).attr('title', title);
+            $this.wrap(a);
+        });
+        if (gallery)
+            $('a.fancybox').attr('rel', 'fancyboxgallery');
+        $('a.fancybox').fancybox({
+            titlePosition: titlePosition
+        });
+    });
+    $.noConflict();
+</script>
+</body>
+</html>

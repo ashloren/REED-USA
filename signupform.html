@@ -1,0 +1,86 @@
+
+<form method="post" action="https://app.icontact.com/icp/signup.php" name="icpsignup" id="icpsignup2990" accept-charset="UTF-8" onsubmit="return verifyRequired2990();" >
+<input type="hidden" name="redirect" value="http://www.ashlylorenzana.com/Code-Experiments/Dark-2/thank-you.html">
+<input type="hidden" name="errorredirect" value="http://www.icontact.com/www/signup/error.html">
+
+<div id="SignUp">
+<table width="260" class="signupframe" border="0" cellspacing="0" cellpadding="5">
+	<tr>
+      <td align="left">
+        <center><input class="email" type="text" name="fields_email">
+      </td>
+    </tr>
+    <input type="hidden" name="listid" value="43750">
+    <input type="hidden" name="specialid:43750" value="L4A4">
+
+    <input type="hidden" name="clientid" value="818106">
+    <input type="hidden" name="formid" value="2990">
+    <input type="hidden" name="reallistid" value="1">
+    <input type="hidden" name="doubleopt" value="1">
+    <tr>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td><input class="button" type="submit" name="Submit" value="Subscribe"></td>
+    </tr>
+    </table>
+</div>
+</form>
+<script type="text/javascript">
+
+var icpForm2990 = document.getElementById('icpsignup2990');
+
+if (document.location.protocol === "https:")
+
+	icpForm2990.action = "https://app.icontact.com/icp/signup.php";
+
+function verifyRequired2990() {
+	if (icpForm2990["fields_email"].value == "") {
+		icpForm2990["fields_email"].focus();
+		alert("The Email field is required.");
+		return false;
+	}
+
+	if (icpForm2990["fields_email"].value && icpForm2990["fields_email"].value !== "") {
+		icpForm2990["fields_email"].value = icpForm2990["fields_email"].value.trim();
+	}
+
+
+
+	return true;
+}
+
+function validDate2990(value) {
+
+	if (value == "") {
+		return true;
+	}
+
+	var dateSections = value.split('/');
+	if (dateSections.length != 3) {
+		return false;
+	}
+
+	var month = dateSections[0];
+	if (month && (month.length > 2 || month < 1 || month > 12)) {
+		return false;
+	}
+
+	var day = dateSections[1];
+	if (day && (day.length > 2 || day < 1 || day > 31)) {
+		return false;
+	}
+
+	var year = dateSections[2];
+	if (!year || (year && year.length != 4)) {
+		return false;
+	}
+
+	var dateValue = new Date(value);
+	if (month != (dateValue.getMonth()+1) || day != dateValue.getDate() || year != dateValue.getFullYear()) {
+		return false;
+	}
+
+	return true;
+}
+</script>
